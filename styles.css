@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Herculanum';
+    src: url('fonts/herculanum.woff') format('woff');
+}
+
+h1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-decoration: none;
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px; /* Add some space between the items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Set the color of the links */
+    font-size: 16px; /* Set the font size */
+}
+
+.highlight-word {
+    color: #ff5050;
+}
+
+.about {
+    text-align: center;
+    padding: 80px 30px 200px 30px;
+    color: #333;	   
+}
+
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-contacts, .photo-contacts {
+    width: 49%; /* Adjust the width as needed */
+}
+
+.photo-contacts img {
+    width: 100%;
+    height: 100vh;
+}
+
+.text-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    background-color: ; /* Optional background color */
+}
+
+.dance-page {
+    justify-content: center;
+    text-align: center;
+    padding: 80px 30px 200px 30px;
+}
+
+.gallery {
+    width: 100%;
+    text-align: center; /* Center the images */
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add some space between rows */
+}
+
+.image {
+    position: relative;
+    flex: 0 0 calc(33.33% - 20px); /* Three images per row with some margin */
+    margin: 0 10px; /* Adjust margin as needed */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Optional: add rounded corners to images */
+}
+
+.image::before {
+    content: attr(data-text); /* Show the value of data-text attribute as the overlay text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:;
+    background-color: rgba(0, 0, 0, 0.6); /* Background color for the overlay */
+    color: white; /* Text color */
+    font-size: 18px; /* Text size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.image:hover::before {
+    opacity: 1; /* Show the overlay when hovering */
+}
+
+.image {
+    position: relative;
+    display: inline-block;
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image:hover .overlay {
+    opacity: 1;
+}
+
+footer {
+    text-align: right;
+}
